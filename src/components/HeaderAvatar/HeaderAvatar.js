@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './HeaderAvatar.sass';
 
 // import UikWidget from '../../components/Uik/UikWidget';
-import { UikWidget, UikTopBar, UikTopBarSection, UikWidgetHeader, UikWidgetContent, UikContainerVertical, UikContainerHorizontal, UikAvatar } from '../../dist/lib';
+import { UikAvatar } from '../../dist/lib';
 import '../../dist/lib/styles.css';
 
 export class HeaderAvatar extends Component {

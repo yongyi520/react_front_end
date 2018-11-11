@@ -4,7 +4,7 @@ import './ResultInput.sass';
 import { UikWidget, UikTopBar, UikTopBarSection, UikWidgetContent, UikContainerVertical } from '../../dist/lib';
 import '../../dist/lib/styles.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee, faCaretDown } from '@fortawesome/free-solid-svg-icons'
+import { faCaretDown } from '@fortawesome/free-solid-svg-icons'
 
 export class ResultInput extends Component {
     render(){

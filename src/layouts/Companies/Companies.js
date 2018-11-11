@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import './Companies.sass';
 
 // import UikWidget from '../../components/Uik/UikWidget';
-import { UikWidget, UikWidgetHeader, UikWidgetContent, UikNavSection, UikTabContainer, UikTabItem, 
-    UikContainerHorizontal, UikContainerVertical, UikHeadlineDesc, UikButton, Uikon } from '../../dist/lib';
+import { UikWidget, UikWidgetContent, UikNavSection, UikTabContainer, UikTabItem, 
+    UikContainerHorizontal, UikContainerVertical, UikHeadlineDesc, UikButton } from '../../dist/lib';
 import '../../dist/lib/styles.css';
 
 import MainHeader from '../../components/MainHeader/MainHeader'
@@ -40,10 +40,6 @@ class Companies extends Component {
             managementQuality: 90,
             competition: 78
         }
-
-        const relatedArticles = [
-
-        ]
 
         return (
             <UikWidget id='Companies'>

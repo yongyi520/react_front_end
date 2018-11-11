@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
 import './Dashboard.sass';
 
-// import UikWidget from '../../components/Uik/UikWidget';
-import { UikWidget, UikWidgetHeader, UikWidgetContent, UikNavSection, UikWidgetTable, UikTopBar, UikTopBarSection, UikContainerHorizontal, UikContainerVertical,
+import { UikWidget, UikWidgetContent, UikNavSection, UikTopBar, UikTopBarSection, UikContainerHorizontal, UikContainerVertical,
     UikButton, UikInput } from '../../dist/lib';
 import '../../dist/lib/styles.css';
-
-import Slider from 'react-rangeslider'
 
 import MainHeader from '../../components/MainHeader/MainHeader'
 import { ResultInput } from '../../components/ResultInput/ResultInput'

@@ -1,14 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import './RelatedArticle.sass';
-
-import { UikTopBar, UikWidgetContent, UikTopBarSection, UikWidgetHeader, UikContainerHorizontal } from '../../dist/lib';
-import '../../dist/lib/styles.css';
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCircle } from '@fortawesome/free-solid-svg-icons'
-
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
 const RelatedArticle = ({article}) => (
   <div className="related-article">
@@ -29,14 +21,14 @@ const RelatedArticle = ({article}) => (
           <span>
             Avec Act, Nexthink enrichit sa suite logicielle d'outils permettant aux équipes support et aux utilisateurs de résoudre les problémes identificiés sur les ordinateurs.
           </span>
-          <a >
+          <button >
             Read more
-          </a>
+          </button>
         </div>
         <div className="footer">
-          <a>Report as non relevant</a>
-          <a>Report invalid score</a>
-          <a className="explain-data">Explain data</a>
+          <button>Report as non relevant</button>
+          <button>Report invalid score</button>
+          <button className="explain-data">Explain data</button>
         </div>
     </div>
 

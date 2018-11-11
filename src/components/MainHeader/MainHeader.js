@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import './MainHeader.sass';
 
@@ -16,10 +16,10 @@ const MainHeader = ({page, profile, data}) => (
             SQUAD
         </UikTopBarSection>
         <UikWidgetHeader className="right main-header-right" rightEl={<HeaderAvatar/>}>
-            { (page == "Dashboard") ? "Dashboard" : "" }
-            { (page == "Companies") ? "Companies" : "" }
+            { (page === "Dashboard") ? "Dashboard" : "" }
+            { (page === "Companies") ? "Companies" : "" }
             
-            { (page == "Companies") ? <div className="main-header-company-title">
+            { (page === "Companies") ? <div className="main-header-company-title">
                     <FontAwesomeIcon icon={faAngleRight} size="2x" className="right-arrow"/>
                     <span>{"Nexthink SA"}</span>
                     </div> 
