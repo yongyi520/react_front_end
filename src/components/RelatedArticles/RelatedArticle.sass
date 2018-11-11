@@ -1,0 +1,73 @@
+@import "../../vars.scss"
+.related-article
+    display: flex
+    flex-direction: row
+    a:hover
+        cursor: pointer
+    .date
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        border: 1px solid $borderColorDarker
+        border-radius: 4px
+        margin-right: 10px
+        padding: 0px 15px
+        height: 90px
+        width: 90px
+        .day
+            font-size: 25px
+            font-weight: 700
+        .month
+            font-size: 20px
+            font-weight: 600
+        .year
+            font-size: 15px
+    .article
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        .header
+            display: flex
+            flex-direction: row
+            align-items: center
+            justify-content: flex-start
+            .rating 
+                display: flex
+                justify-content: center
+                align-items: center
+                width: 40px
+                height: 40px
+                background-color: $lightGreen
+                border-radius: 25px
+                color: white
+                font-size: 12px
+            .title
+                color: $blue
+                margin: 0px 10px
+                &:hover
+                    cursor: pointer
+        .source
+            display: flex 
+            flex-direction: row
+            align-items: center
+            color: $textSecondary
+        .preview
+            display: flex
+            flex-direction: row
+            align-items: center
+            color: $textMain
+            a 
+                padding: 0px 15px
+                font-size: x-small
+        .footer
+            display: flex
+            flex-direction: row
+            align-items: center
+            padding: 10px 0px
+            a 
+                color: $red
+                padding: 0px 10px 0px 0px
+                font-size: small
+                &.explain-data
+                    color: $textMain

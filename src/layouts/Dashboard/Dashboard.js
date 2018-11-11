@@ -8,51 +8,45 @@ import '../../dist/lib/styles.css';
 
 import Slider from 'react-rangeslider'
 
-import { MainHeader } from '../../components/MainHeader/MainHeader'
+import MainHeader from '../../components/MainHeader/MainHeader'
 import { ResultInput } from '../../components/ResultInput/ResultInput'
 import { ResultTable } from '../../components/ResultTable/ResultTable'
 class Dashboard extends Component {
 
-
-
     render(){
         return (
-            <div id="dashboard">
-                <UikWidget className="wrapper">
-                    <MainHeader/>
-                    <div className="content-wrapper">
-                        <UikContainerHorizontal>
-                            <UikNavSection className="left content-left">
-                                
-                            </UikNavSection>
-                            <UikWidgetContent className="right content">
-                                <UikContainerVertical className="content-input-wrapper">
-                                    <ResultInput/>
-                                    <ResultInput/>
-                                    <ResultInput/>
-                                </UikContainerVertical>
-                                <UikContainerVertical className="content-result">
-                                    <UikTopBar className="content-result-header">
-                                        <UikTopBarSection>
-                                            Companies ranking results
-                                        </UikTopBarSection>
-                                        <UikTopBarSection>
-                                            <div className="input">
-                                                <UikInput />
-                                            </div>
-                                            <UikButton>
-                                                Export
-                                            </UikButton>
-                                        </UikTopBarSection>
-                                    </UikTopBar>
-                                    <ResultTable/>
-                                </UikContainerVertical>
-                                
-                            </UikWidgetContent>
-                        </UikContainerHorizontal>
-                    </div>
-                </UikWidget>
-            </div>
+            <UikWidget id='Dashboard' className="wrapper">
+                <MainHeader page="Dashboard"/>
+
+                <UikContainerHorizontal className="content-wrapper">
+                    <UikNavSection className="left content-left">
+                        
+                    </UikNavSection>
+                    <UikWidgetContent className="right content">
+                        <UikContainerVertical className="content-input-wrapper">
+                            <ResultInput/>
+                            <ResultInput/>
+                        </UikContainerVertical>
+                        <UikContainerVertical className="content-result">
+                            <UikTopBar className="content-result-header">
+                                <UikTopBarSection className="table-header-left">
+                                    Companies ranking results (891)
+                                </UikTopBarSection>
+                                <UikTopBarSection className="table-header-right">
+                                    <div className="table-header-input">
+                                        <UikInput placeholder="Filter on company name"/>
+                                    </div>
+                                    <UikButton primary className="table-header-button">
+                                        Export
+                                    </UikButton>
+                                </UikTopBarSection>
+                            </UikTopBar>
+                            <ResultTable/>
+                        </UikContainerVertical>
+                        
+                    </UikWidgetContent>
+                </UikContainerHorizontal>
+            </UikWidget>
         )
     }
 }

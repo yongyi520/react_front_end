@@ -15,7 +15,7 @@ export class ResultInput extends Component {
                         Company Visibility
                     </UikTopBarSection>
                     <UikTopBarSection>
-                            <div><FontAwesomeIcon icon={faCaretDown} size="lg" /></div>
+                        <FontAwesomeIcon icon={faCaretDown} size="lg" />
                     </UikTopBarSection>    
                 </UikTopBar>
                 <UikWidgetContent>

@@ -9,7 +9,7 @@ export class ResultTable extends Component {
     render(){
         const sampleProp = [
             {
-                name: "Company",
+                name: "Company X",
                 visibility: 48,
                 growth: 28,
                 managementQuality: 68,
@@ -113,11 +113,11 @@ export class ResultTable extends Component {
                         return (
                             <tr>
                                 <td>
-                                    <div>{data.name}</div>
+                                    <div className="company-name">{data.name}</div>
                                     <div className="company-info">
-                                        <span>age: {data.age}</span>
-                                        <span>Last Revenue: {data.lastRevenue}</span>
-                                        <span>Country: {data.country}</span>
+                                        <span>Age: <b>{data.age} years</b></span>
+                                        <span>Last Revenue: <b>{data.lastRevenue}M$</b></span>
+                                        <span>Country: <b>{data.country}</b></span>
                                     </div>
                                 </td>
                                 <td>
@@ -127,7 +127,7 @@ export class ResultTable extends Component {
                                 <td>{data.growth}%</td>
                                 <td>{data.managementQuality}%</td>
                                 <td>{data.competition}%</td>
-                                <td>{data.totalScore}%</td>
+                                <td><b>{data.totalScore}%</b></td>
                             </tr>
                         )
                     })
