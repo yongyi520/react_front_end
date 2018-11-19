@@ -6,6 +6,8 @@ import './App.sass';
 import Dashboard from './layouts/Dashboard/Dashboard'
 import Companies from './layouts/Companies/Companies'
 
+
+
 class App extends Component {
   render() {
     return (

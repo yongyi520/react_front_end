@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import './Dashboard.sass';
 
+import { connect } from 'react-redux';
+import { fetchAllCompanies } from '../../actions'
+
 import { UikWidget, UikWidgetContent, UikNavSection, UikTopBar, UikTopBarSection, UikContainerHorizontal, UikContainerVertical,
     UikButton, UikInput } from '../../dist/lib';
 import '../../dist/lib/styles.css';
@@ -10,7 +13,12 @@ import { ResultInput } from '../../components/ResultInput/ResultInput'
 import { ResultTable } from '../../components/ResultTable/ResultTable'
 class Dashboard extends Component {
 
+    componentDidMount(){
+        this.props.fetchAllCompanies();
+    }
+
     render(){
+        console.log("dashboard companies prop", this.props.companies);
         return (
             <UikWidget id='Dashboard' className="wrapper">
                 <MainHeader page="Dashboard"/>
@@ -48,4 +56,21 @@ class Dashboard extends Component {
     }
 }
 
-export default Dashboard;
+const mapStateToProps = state => {
+    return {
+        companies: state.companies
+    }
+}
+
+const mapDispatchToProps = dispatch => {
+    return {
+        fetchAllCompanies: () => {
+            dispatch(fetchAllCompanies);
+        }
+    }
+}
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(Dashboard);

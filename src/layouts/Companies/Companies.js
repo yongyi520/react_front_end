@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import './Companies.sass';
 
+import { connect } from 'react-redux';
+import { fetchAllCompanies } from '../../actions'
+
 // import UikWidget from '../../components/Uik/UikWidget';
 import { UikWidget, UikWidgetContent, UikNavSection, UikTabContainer, UikTabItem, 
     UikContainerHorizontal, UikContainerVertical, UikHeadlineDesc, UikButton } from '../../dist/lib';
@@ -22,6 +25,10 @@ class Companies extends Component {
         };
     }
 
+    componentDidMount(){
+        this.props.fetchAllCompanies();
+    }
+
     closeModal() {
         console.log("closing modal");
         this.setState({ modal: false });
@@ -41,6 +48,7 @@ class Companies extends Component {
             competition: 78
         }
 
+        console.log("companies", this.props.companies);
         return (
             <UikWidget id='Companies'>
                 <RelatedArticles show={this.state.modal} onHide={this.closeModal}/>
@@ -100,4 +108,21 @@ class Companies extends Component {
     }
 }
 
-export default Companies;
+const mapStateToProps = state => {
+    return {
+        companies: state.companies
+    }
+}
+
+const mapDispatchToProps = dispatch => {
+    return {
+        fetchAllCompanies: () => {
+            dispatch(fetchAllCompanies);
+        }
+    }
+}
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(Companies);
